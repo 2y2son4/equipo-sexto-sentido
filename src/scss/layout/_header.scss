@@ -1,101 +1,101 @@
 .header {
-	width: 100%;
-	height: 105px;
-	position: fixed;
-	z-index: 1500;
-	background-color: $blue-green;
-	opacity: 0.95;
-	@media all and (min-width: 768px) {
-		height: 60px;
-	}
-	&__container {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		@media all and (min-width: 768px) {
-			flex-direction: row;
-			align-items: center;
-			margin: 0 45px;
-		}
-		@media all and (min-width: 1200px) {
-			max-width: 1200px;
-			margin: auto;
-		}
-	}
-	&__link {
-		@include headerText();
-		@include absoluteCenteredFlex();
-		margin-top: 15px;
-		&:hover {
-			color: $dark-grey;
-			transition: $transitionLinks;
-		}
-		@media all and (min-width: 768px) {
-			width: 100%;
-			padding: 15px 0;
-			margin: 0;
-			justify-content: left;
-		}
-	}
-	&__text--animation {
-		animation: fadeIn ease 6s;
-	}
-	@keyframes fadeIn {
-		0% {
-			opacity: 0;
-		}
-		50% {
-			opacity: 0.5;
-			transform: scale(1.3);
-		}
-		100% {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-	&__nav {
-		height: 45px;
-		background-color: $aqua;
-		opacity: 0.95;
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		@media all and (min-width: 768px) {
-			width: 50%;
-			background-color: $blue-green;
-			position: static;
-			display: flex;
-			justify-content: flex-end;
-		}
-	}
+  width: 100%;
+  height: 105px;
+  position: fixed;
+  z-index: 1500;
+  background-color: $blue-green;
+  opacity: 0.95;
+  @media all and (min-width: 768px) {
+    height: 60px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media all and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      margin: 0 45px;
+    }
+    @media all and (min-width: 1200px) {
+      max-width: 1150px;
+      margin: auto;
+    }
+  }
+  &__link {
+    @include headerText();
+    @include absoluteCenteredFlex();
+    margin-top: 15px;
+    &:hover {
+      color: $dark-grey;
+      transition: $transitionLinks;
+    }
+    @media all and (min-width: 768px) {
+      width: 100%;
+      padding: 15px 0;
+      margin: 0;
+      justify-content: left;
+    }
+  }
+  &__text--animation {
+    animation: fadeIn ease 6s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.3);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  &__nav {
+    height: 45px;
+    background-color: $aqua;
+    opacity: 0.95;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @media all and (min-width: 768px) {
+      width: 50%;
+      background-color: $blue-green;
+      position: static;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 }
 .menu {
-	height: 45px;
-	padding-left: 0;
-	margin: 0;
-	display: flex;
-	justify-content: space-around;
-	align-content: center;
-	&__item {
-		list-style-type: none;
-		display: flex;
-		align-items: center;
-	}
-	&__link {
-		font-family: $font-title;
-		font-weight: 500;
-		font-size: 0.9375rem;
-		line-height: 1.875rem;
-		text-transform: uppercase;
-		color: $white;
-		padding: 15px 0;
-		&:hover {
-			color: $dark-grey;
-			transition: $transitionLinks;
-		}
-	}
-	@media all and (min-width: 768px) {
-		width: 300px;
-		justify-content: space-between;
-	}
+  height: 45px;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  &__item {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    font-family: $font-title;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.875rem;
+    text-transform: uppercase;
+    color: $white;
+    padding: 15px 0;
+    &:hover {
+      color: $dark-grey;
+      transition: $transitionLinks;
+    }
+  }
+  @media all and (min-width: 768px) {
+    width: 300px;
+    justify-content: space-between;
+  }
 }

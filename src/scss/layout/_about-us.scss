@@ -12,7 +12,7 @@
     max-width: 1200px;
   }
 }
-/* ABOUT US*/
+
 .about {
   width: 100%;
   position: relative;
@@ -21,11 +21,77 @@
     top: 0px;
   }
 }
-/*  .equipo {
+
+.team {
+  &__title {
+    scroll-margin-top: 9rem;
+    line-height: 45px;
+    font-family: $font-title;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: $aqua;
+    text-transform: uppercase;
+
+    @media all and (min-width: 768px) {
+      color: $blue-green;
+      margin-top: 45px;
+      scroll-margin-top: 6rem;
+    }
+  }
+  &__text {
+    width: 100%;
+    font-family: $font-text;
+    font-size: 1rem;
+    text-align: center;
+    color: $dark-grey;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 0 60px;
+    @media all and (min-width: 768px) {
+      margin-bottom: 45px;
+    }
+    @media all and (min-width: 1200px) {
+      margin-bottom: 60px;
+      padding: 0 100px;
+    }
+  }
+}
+
+.sw {
+  width: 100%;
+  background-color: $cool-grey;
+  &__item {
+    margin-top: 30px;
+    @media all and (min-width: 768px) {
+      width: 50%;
+      margin-top: 45px;
+      margin-bottom: 60px;
+      &.sw__item__fortalezas {
+        margin-right: 15px;
+      }
+      &.sw__item__weakness {
+        margin-left: 15px;
+      }
+    }
+    @media all and (min-width: 1200px) {
+      &.sw__item__fortalezas {
+        margin-right: 22.5px;
+      }
+      &.sw__item__weakness {
+        margin-left: 22.5px;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
     margin-left: 15px;
     margin-right: 15px;
     border: 0;
     @media all and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
       margin-left: 45px;
       margin-right: 45px;
     }
@@ -35,113 +101,43 @@
       max-width: 1200px;
     }
   }
-*/
-.equipo__title {
-  scroll-margin-top: 9rem;
-  line-height: 45px;
-  font-family: $font-title;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: center;
-  color: $aqua;
-  text-transform: uppercase;
-  //margin-top: 30px; ---esto está hecho con position relative top en .about --
-  @media all and (min-width: 768px) {
+  &__title {
+    width: 100%;
+    font-family: $font-title;
+    font-size: 1.375rem;
+    font-weight: 500;
+    text-align: center;
     color: $blue-green;
-    margin-top: 45px;
-    scroll-margin-top: 6rem;
-  }
-}
-.equipo__text {
-  width: 100%;
-  font-family: $font-text;
-  font-size: 1rem;
-  text-align: center;
-  color: $dark-grey;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  @media all and (min-width: 768px) {
-    margin-bottom: 45px;
-  }
-  @media all and (min-width: 1200px) {
-    margin-bottom: 60px;
-  }
-}
-.FyD {
-  width: 100%;
-  background-color: $cool-grey;
-}
-.FyD__container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 15px;
-  margin-right: 15px;
-  border: 0;
-  @media all and (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 45px;
-    margin-right: 45px;
-  }
-  @media all and (min-width: 1200px) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
-  }
-}
-.FyD__item {
-  margin-top: 30px;
-  @media all and (min-width: 768px) {
-    width: 50%;
-    margin-top: 45px;
-    margin-bottom: 60px;
-    &.FyD__item__fortalezas {
-      margin-right: 15px;
-    }
-    &.FyD__item__debilidades {
-      margin-left: 15px;
+    line-height: 45px;
+    @media all and (min-width: 768px) {
+      margin-bottom: 15px;
     }
   }
-  @media all and (min-width: 1200px) {
-    &.FyD__item__fortalezas {
-      margin-right: 22.5px;
-    }
-    &.FyD__item__debilidades {
-      margin-left: 22.5px;
+  &__text {
+    width: 100%;
+    font-family: $font-text;
+    font-size: 1rem;
+    color: $dark-grey;
+    letter-spacing: normal;
+    text-align: center;
+    padding: 0 15px;
+    @media all and (min-width: 1200px) {
+      padding: 0 60px;
     }
   }
-}
-.FyD__title {
-  width: 100%;
-  font-family: $font-title;
-  font-size: 1.375rem;
-  font-weight: 500;
-  text-align: center;
-  color: $blue-green;
-  line-height: 45px;
-  @media all and (min-width: 768px) {
-    margin-bottom: 15px;
+  &__decoration {
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    transform: rotate(45deg) translate(-22px);
   }
 }
-.FyD__text {
-  width: 100%;
-  font-family: $font-text;
-  font-size: 1rem;
-  color: $dark-grey;
-  letter-spacing: normal;
-  text-align: center;
-}
-.debilidades {
+
+.weakness {
   margin-bottom: 45px;
   @media all and (min-width: 768px) {
     margin-bottom: 0px;
   }
-}
-.FyD__decoration {
-  background-color: white;
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  left: 50%;
-  transform: rotate(45deg) translate(-22px);
 }

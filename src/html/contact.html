@@ -21,34 +21,23 @@
       linkContact="./contact.html"
     ></include>
     <include src="./partials/hero-contact.html"></include>
-    <div class="container contact__container"
-      ><h2 class="FyD__title contact__title">Contacto</h2>
-      <p class="FyD__text contact__text"
-        >¿Has tenido una visión de cómo querrías que fuera tu página web? ¿Un poltergeist merodea por tu browser? Rellena este formulario para contactar con nosotras. En el Equipo Sexto Sentido no tenemos miedo al código.</p
-      >
-      <small class="FyD__text--small"
-        >Todos los campos marcados con <span class="asterisk">*</span> son
-        obligatorios.</small
+    <div class="container contact__container">
+      <h2 class="sw__title contact__title">Contacto</h2>
+      <p class="sw__text contact__text">
+        ¿Has tenido una visión de cómo querrías que fuera tu página web? ¿Un poltergeist merodea por tu browser? Rellena
+        este formulario para contactar con nosotras. En el Equipo Sexto Sentido no tenemos miedo al código.
+      </p>
+      <small class="sw__text--small"
+        >Todos los campos marcados con <span class="asterisk">*</span> son obligatorios.</small
       >
     </div>
     <form class="form container contact__container" action="https://formspree.io/f/mzbkyejj" method="POST">
-      <label class="form__label" for="name">
-        Nombre completo <span class="asterisk">*</span></label
-      >
-      <input
-        class="form__input"
-        id="name"
-        name="completeName"
-        type="text"
-        placeholder="Nombre..."
-        required
-      />
+      <label class="form__label" for="name"> Nombre completo <span class="asterisk">*</span></label>
+      <input class="form__input" id="name" name="completeName" type="text" placeholder="Nombre..." required />
 
       <div class="form__container--flex">
         <div class="form__containerEmail">
-          <label class="form__label" for="email"
-            >Email <span class="asterisk">*</span></label
-          >
+          <label class="form__label" for="email">Email <span class="asterisk">*</span></label>
           <input
             class="form__input"
             id="email"
@@ -60,19 +49,11 @@
         </div>
         <div class="form__containerPhone">
           <label class="form__label" for="tel">Teléfono</label>
-          <input
-            class="form__input"
-            id="tel"
-            name="tel"
-            type="tel"
-            placeholder="Ej: 123456789"
-          />
+          <input class="form__input" id="tel" name="tel" type="tel" placeholder="Ej: 123456789" />
         </div>
       </div>
 
-      <label class="form__label" for="comment">
-        Mensaje <span class="asterisk">*</span></label
-      >
+      <label class="form__label" for="comment"> Mensaje <span class="asterisk">*</span></label>
       <textarea
         class="form__area"
         name="comment"
@@ -81,7 +62,7 @@
         rows="10"
         placeholder="¿Qué necesitas?"
       ></textarea>
-      <input type="submit" class="form__button" value="Enviar">
+      <input type="submit" class="form__button" value="Enviar" />
     </form>
     <include
       src="./partials/footer.html"

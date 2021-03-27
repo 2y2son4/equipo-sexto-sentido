@@ -7,7 +7,7 @@
     top: 0px;
   }
 }
-.quienes-somos {
+.aboutUs {
   scroll-margin-top: 9rem;
   font-family: $font-title;
   font-size: 1.5rem;
@@ -26,9 +26,51 @@
   }
 }
 
-.imagen-adalaber {
-  border-radius: 4px;
-  border: solid 5px $cool-grey;
+.article {
+  border-top: $aqua 2px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  &__img {
+    border-radius: 4px;
+    border: solid 5px $cool-grey;
+  }
+  &__name {
+    font-family: $font-text;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 2.25;
+    text-align: center;
+    color: $dark-grey;
+  }
+  &__bio {
+    font-size: 1rem;
+    font-family: $font-text;
+    text-align: center;
+    color: $dark-grey;
+  }
+  &__sm {
+    margin-top: 15px;
+    color: $blue-green;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__link {
+    text-decoration: none;
+    color: $blue-green;
+  }
+  &__bullet {
+    padding: 0 10px;
+  }
+}
+
+.next-to-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .eugenia {
@@ -39,7 +81,6 @@
   background-repeat: no-repeat;
   transition: all 0.8s ease;
   background-image: url('.././images/eugenia.jpg');
-
   &:hover {
     background-image: url('.././images/eugenia_ghost.png');
   }
@@ -52,7 +93,6 @@
   background-repeat: no-repeat;
   transition: all 0.8s ease;
   background-image: url('.././images/adriana.jpg');
-
   &:hover {
     background-image: url('.././images/adriana_ghost.png');
   }
@@ -81,81 +121,6 @@
     background-image: url('.././images/paula_ghost.png');
   }
 }
-.nombre-adalaber {
-  font-family: $font-text;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 2.25;
-  text-align: center;
-  color: $dark-grey;
-}
-.bio {
-  font-size: 1rem;
-  font-family: $font-text;
-  text-align: center;
-  color: $dark-grey;
-}
-.article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.rrss {
-  margin-top: 15px;
-  color: $blue-green;
-  text-align: center;
-  margin-bottom: 20px;
-}
-a {
-  text-decoration: none;
-  color: $blue-green;
-}
-.next-to-img {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@media all and (min-width: 768px) {
-  .section-adalabers {
-    margin-bottom: 60px;
-  }
-  .article {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-    max-width: 680px;
-    margin: auto;
-  }
-
-  //Adriana y Paula
-  .article:nth-child(odd) {
-    flex-direction: row-reverse;
-  }
-  .next-to-img {
-    width: 56%;
-    margin-left: 45px;
-    margin-right: 45px;
-    &-odd {
-      align-items: flex-start;
-    }
-    &-even {
-      align-items: flex-end;
-    }
-  }
-
-  .bio {
-    &-odd {
-      text-align: left;
-    }
-    &-even {
-      text-align: right;
-    }
-  }
-}
 
 .iconTwist {
   transition: all 1s ease;
@@ -165,10 +130,46 @@ a {
   }
 }
 
+@media all and (min-width: 768px) {
+  .section-adalabers {
+    margin-bottom: 10px;
+  }
+  .article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto 20px;
+    padding-top: 20px;
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+    &__bio {
+      &-odd {
+        text-align: right;
+      }
+      &-even {
+        text-align: left;
+      }
+    }
+  }
+  .next-to-img {
+    width: 56%;
+    &-odd {
+      align-items: flex-end;
+      margin-right: 45px;
+    }
+    &-even {
+      align-items: flex-start;
+      margin-left: 45px;
+    }
+  }
+}
+
 @media all and (min-width: 1200px) {
   .article {
     max-width: 760px;
-    margin: auto;
   }
   .next-to-img {
     width: 66%;
