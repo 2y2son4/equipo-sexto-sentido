@@ -27,7 +27,7 @@
     @include absoluteCenteredFlex();
     margin-top: 15px;
     &:hover {
-      color: $dark-grey;
+      // color: $dark-grey;
       transition: $transitionLinks;
     }
     @media all and (min-width: 768px) {
@@ -62,7 +62,7 @@
     width: 100%;
     @media all and (min-width: 768px) {
       width: 50%;
-      background-color: $blue-green;
+      background-color: transparent;
       position: static;
       display: flex;
       justify-content: flex-end;
@@ -97,5 +97,64 @@
   @media all and (min-width: 768px) {
     width: 300px;
     justify-content: space-between;
+  }
+}
+
+// glitch effect
+
+.glitch {
+  letter-spacing: 2px;
+  @media all and (min-width: 768px) {
+    position: relative;
+  }
+
+  &:before,
+  &:after {
+    // display: block;
+    content: attr(data-glitch);
+    text-transform: uppercase;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+  }
+  &:after {
+    color: $dark-grey;
+    z-index: -2;
+  }
+  &:before {
+    color: #d4c86d;
+    z-index: -1;
+  }
+  &:hover {
+    &:before {
+      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+    }
+    &:after {
+      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
+    }
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+  to {
+    transform: translate(0);
   }
 }
