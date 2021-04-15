@@ -89,10 +89,10 @@
     text-transform: uppercase;
     color: $white;
     padding: 15px 0;
-    &:hover {
-      color: $dark-grey;
-      transition: $transitionLinks;
-    }
+    // &:hover {
+    //   color: $dark-grey;
+    //   transition: $transitionLinks;
+    // }
   }
   @media all and (min-width: 768px) {
     width: 300px;
@@ -103,7 +103,7 @@
 // glitch effect
 
 .glitch {
-  letter-spacing: 2px;
+  // letter-spacing: 2px;
   @media all and (min-width: 768px) {
     position: relative;
   }
@@ -120,20 +120,49 @@
     width: 100%;
     opacity: 0.8;
   }
-  &:after {
-    color: $dark-grey;
-    z-index: -2;
-  }
   &:before {
     color: #d4c86d;
     z-index: -1;
   }
+  &:after {
+    color: $dark-grey;
+    z-index: -2;
+  }
+
   &:hover {
     &:before {
       animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
     }
     &:after {
       animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
+    }
+  }
+}
+.glitch-nav {
+  // letter-spacing: 2px;
+  // @media all and (min-width: 768px) {
+  //   position: relative;
+  // }
+
+  &:before {
+    // display: block;
+    content: attr(data-glitch-nav);
+    text-transform: uppercase;
+    position: absolute;
+    top: inherit;
+    left: inherit;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+  }
+  &:before {
+    color: #68633b;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:before {
+      animation: glitch-nav 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
     }
   }
 }
@@ -153,6 +182,27 @@
   }
   80% {
     transform: translate(3px, -3px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes glitch-nav {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
   }
   to {
     transform: translate(0);
